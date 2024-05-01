@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@500;700&display=swap');
+
+body{
+  @apply text-lg font-roboto
+}
+
+.container {
+  @apply mx-auto 2xl:max-w-[1320px] xl:max-w-[1280px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] px-4;
+}
+
+h1,h2,h3,h4,h5{
+ @apply font-ubuntu font-bold
+}
+
+
+.primary-btn {
+  @apply bg-[#009DAE] px-7 py-3 border border-[#009DAE] rounded-[5px] text-white
+}
+.primary-btn:hover {
+  @apply bg-white px-7 py-3 rounded-[5px] text-[#009DAE] border border-[#009DAE] transition-all
+}
+
+.banner-bg{
+  background: url(component/Banner/images/bg_black.png) top center no-repeat;
+  background-size: cover;
+}
+
+.bg-circle{
+  @apply text-[#009DAE] border border-[#009DAE] p-3 rounded-full cursor-pointer
+}
+.bg-circle:hover{
+  @apply text-white border border-[#009DAE] bg-[#009DAE] p-3 rounded-full  
+}
+.bg-circle-footer{
+  @apply text-white border border-white p-3 rounded-full  
+}
+.bg-circle-footer:hover{
+  @apply text-[#009DAE] border bg-white p-3 rounded-full cursor-pointer
+}
+
+.mySwiper .swiper-button-prev{
+  border-radius: 56px;
+  background: #FF4F6E;
+  /* backdrop-filter: blur(25px); */
+  width: 56px;
+  height: 56px;
+  color: #FFFFFF;
+  margin-top: -220px;
+  margin-left: 88%!important;
+}
+.mySwiper .swiper-button-next {
+  border-radius: 56px;
+  background: #FF4F6E;
+  /* backdrop-filter: blur(25px); */
+  width: 56px;
+  height: 56px;
+  color: #FFFFFF;
+  margin-top: -220px;
+}
+
+.mySwiper{
+  display: flex!important;
+  flex-direction: column-reverse!important;
+}
+
+
+.mySwiper .swiper-button-prev:after, .mySwiper .swiper-button-next:after {
+  font-size: 20px;
+}
+
+.mySwiper .swiper-button-disabled{
+  background-color: #ECECEC;
+  color: #A8B2CB;
+}
+
+
+@media (min-width: 2560px){
+  .service_container{
+    margin-left: 360px;
+  }
+}
+
+/* Hide pagination on medium devices */
+@media (max-width: 1280px) {
+  .mySwiper .swiper-button-prev{
+    border-radius: 56px;
+    background: #FF4F6E;
+    /* backdrop-filter: blur(25px); */
+    width: 56px;
+    height: 56px;
+    color: #FFFFFF;
+    margin-top: -220px;
+    margin-left: 82%!important;
+  }
+}
+@media (max-width: 1023px) {
+  .mySwiper .swiper-button-prev{
+    border-radius: 56px;
+    background: #FF4F6E;
+    /* backdrop-filter: blur(25px); */
+    width: 56px;
+    height: 56px;
+    color: #FFFFFF;
+    margin-top: -220px;
+    margin-left: 78%!important;
+  }
+}
+
+
+.mySwiper .swiper-button-next, .mySwiper .swiper-button-prev{
+  @apply hidden md:flex
+}
+
+
+.offcanvas.active {
+  left: 0;
+}
